@@ -1,30 +1,17 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+  import Title from "./lib/Title.svelte";
+  import Beginning from "./lib/Beginning.svelte";
+  import Background from "./lib/Background.svelte";
+  import AboutMe from "./lib/AboutMe.svelte";
+  import Skills from "./lib/Skills.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <Title />
+  <Beginning />
+  <Background />
+  <AboutMe />
+  <Skills />
 </main>
 
 <style>
@@ -36,10 +23,10 @@
     0% {
       transform: translateY(-20px);
       opacity: 0;
-  }
+    }
     100% {
       transform: translateY(0);
       opacity: 1;
-  }
+    }
   }
 </style>

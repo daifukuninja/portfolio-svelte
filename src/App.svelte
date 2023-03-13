@@ -28,19 +28,18 @@
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  main {
+    color: #ffffff;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+  @keyframes -global-from-left {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+    100% {
+      transform: translateY(0);
+      opacity: 1;
   }
-  .read-the-docs {
-    color: #888;
   }
 </style>

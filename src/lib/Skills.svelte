@@ -56,7 +56,7 @@
     });
 </script>
 
-<div class="about">
+<div class="skills">
     <h2>Skills</h2>
     <div id="skillmap-container">
         <div id="cf" class="skillsmap">
@@ -91,11 +91,11 @@
     p {
         font-family: "Noto Sans JP";
     }
-    .about {
+    .skills {
         background-color: #110011;
-        height: 80vh;
         padding-top: 1em;
         padding-left: 1em;
+        padding-bottom: 1em;
         opacity: 0.9;
     }
     .blankbox {

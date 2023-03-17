@@ -34,9 +34,11 @@
         ticks: {
           backdropColor: "#000000",
           color: "#FFFFFF",
-          font: {
-
-          }
+          font: {},
+        },
+        angleLines: {
+          display: true,
+          color: "#FFFFFF",
         },
         max: 10,
       },
@@ -46,7 +48,7 @@
         position: "top",
         labels: {
           color: "#FFFFFF",
-        }
+        },
       },
       title: {
         display: true,
@@ -54,11 +56,11 @@
         color: "#FFFFFF",
         font: {
           size: 18,
-        }
+        },
       },
     },
     animation: {
       duration: 1200,
-    }
+    },
   }}
 />

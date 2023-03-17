@@ -56,9 +56,9 @@
     });
 </script>
 
-<div class="skills">
+<div class="skillmaps-container">
     <h2>Skills</h2>
-    <div id="skillmap-container">
+    <div id="skillmaps">
         <div id="cf" class="skillsmap">
             {#if fireFrontend}
                 <SkillsMap data={data_frontend} title={"Web Frontend"} />
@@ -91,17 +91,18 @@
     p {
         font-family: "Noto Sans JP";
     }
-    .skills {
+    .skillmaps-container {
         background-color: #110011;
         padding-top: 1em;
         padding-left: 1em;
         padding-bottom: 1em;
         opacity: 0.9;
+        padding-bottom: 50vh;
     }
     .blankbox {
         height: 50vh;
     }
-    #skillmap-container {
+    #skillmaps {
         margin-bottom: 1em;
     }
 
@@ -115,7 +116,7 @@
         .skillsmap {
             width: 30vw;
         }
-        #skillmap-container {
+        #skillmaps {
             display: flex;
             justify-content: space-around;
         }

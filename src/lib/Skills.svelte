@@ -1,17 +1,19 @@
 <script>
     import { onMount } from "svelte";
     import SkillsMap from "./charts/skillsmaps/SkillsMap.svelte";
+    import Timeline from "./charts/timeline/Timeline.svelte";
     import {
         data_frontend,
         data_backend,
         data_utilties,
     } from "./charts/skillsmaps/data";
+
     const message_jp =
         `Python, C#を開発言語としたデスクトップアプリケーション, エンドユーザ業務効率化の支援, ツール類の設計ならびに開発経験を豊富に持つ。近年はWebシステムの分野において, フロントエンドおよびサーバーサイド(REST API)の開発でPHP(Laravel), Goの実装経験を積む。
         
         過去にも .NET(旧 ASP.NET MVC)フレームワークを用いたフロントエンド(HTML, CSS3, JavaScript)からバックエンド(C#, Oracle Database)まで, Webアプリケーション開発をフルスタックで経験。
         
-        幅広い技術分野とエンドユーザコンピューティングの経験を兼ね備えた, ユーザーフレンドリーな提案力, 実装力を強みとする。`.replace(
+        幅広い技術分野の実装経験, さらに要件定義から実装・テストまで, 15年以上にわたる end to end の業務経験を兼ね備え, ユーザー目線の提案力, 実装力を強みとする。`.replace(
             /\n/g,
             "<br />"
         );
@@ -58,6 +60,7 @@
 
 <div class="skillmaps-container">
     <h2>Skills</h2>
+    <h4>by Rader Chart</h4>
     <div id="skillmaps">
         <div id="cf" class="skillsmap">
             {#if fireFrontend}
@@ -84,6 +87,12 @@
             {/if}
         </div>
     </div>
+    <h4>by Timeline</h4>
+    <div id="timeline-container">
+        <div id="timeline">
+            <Timeline />
+        </div>
+    </div>    
     <p>{@html message_jp}</p>
 </div>
 
@@ -97,7 +106,7 @@
         padding-left: 1em;
         padding-bottom: 1em;
         opacity: 0.9;
-        padding-bottom: 50vh;
+        padding-bottom: 10vh;
     }
     .blankbox {
         height: 50vh;
@@ -108,7 +117,7 @@
 
     .skillsmap {
         background-color: #000000;
-        margin-bottom: 1em;
+        margin-bottom: 5em;
         margin-right: 1em;
     }
 
@@ -121,4 +130,22 @@
             justify-content: space-around;
         }
     }
-</style>
+
+    #timeline-container {
+        background-color: #110011;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+    }
+    #timeline {
+        width: 95vw;
+        padding-bottom: 2em;
+    }
+    @media (min-width: 768px) {
+        #timeline {
+            width: 80vw;
+        }
+    }
+    </style>

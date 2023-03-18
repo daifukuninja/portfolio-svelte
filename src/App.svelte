@@ -4,6 +4,8 @@
   import Background from "./lib/Background.svelte";
   import AboutMe from "./lib/AboutMe.svelte";
   import Skills from "./lib/Skills.svelte";
+  import Zenn from "./lib/Zenn.svelte";
+  import Profile from "./lib/Profile.svelte";
 </script>
 
 <main>
@@ -12,6 +14,8 @@
   <Background />
   <AboutMe />
   <Skills />
+  <Profile />
+  <Zenn />
 </main>
 
 <style>

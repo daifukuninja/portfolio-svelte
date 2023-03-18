@@ -37,6 +37,6 @@ export const data_utilties = {
       label: 'utilities dataset.', // for legend
     },
   ],
-  labels: ['Docker/Compose', 'Git', 'AWS S3', 'Cloudflare', 'VSCode'],
+  labels: ['Docker/Compose', 'Git', 'AWS', 'Cloudflare', 'VSCode'],
 };
 

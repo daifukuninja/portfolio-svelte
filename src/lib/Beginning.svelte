@@ -2,8 +2,8 @@
     import Introduction from "./Introduction.svelte";
     import BottomArrow from "./BottomArrow.svelte";
     const message_jp = `ここは日本在住のエンジニア、 \nMIHARA Keishi のポートフォリオサイトです。`.replace(/\n/g, "<br />");
-    const message_en = `This is KEISHI Mihara's portfolio site.`;
-    const caption = `( web + backend + desktop application engineer.  ....I'll do whatever I can. )`;
+    const message_en = `This is Keishi MIHARA's portfolio site.`;
+    const caption = `( web + backend + desktop application engineer.  ...well....I'll do whatever I can. )`;
     const contents = ``;
 </script>
 

@@ -1,5 +1,5 @@
 <div>
-    <h1>Mihara's Portfolio</h1>
+    <h1>MIHARA's Portfolio</h1>
 </div>
 
 <style>

@@ -37,4 +37,9 @@
     a:visited {
         color: inherit;
     }
+    @media (min-width: 768px) {
+        p {
+            width: 50vw;
+        }
+    }
 </style>

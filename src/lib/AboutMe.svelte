@@ -1,13 +1,6 @@
 <script>
-    const message_jp =
-        `MIHARA Keishi は日本のフリーランスWebエンジニア, バックエンドプログラマ, デスクトップアプリケーションエンジニア, 糖質制限者, 会社員, 団塊ジュニア, テックライター, スノーボーダー, 運転手, 元 Lotus Notes/Domino アプリケーションデータベースエンジニアでExcelマクロ書き。
-  
-  ３児の父でもあり, 家庭においては主に掃除, 残飯処理, 害虫駆除, 高所作業などを担当する。
-
-  茨城県水戸市出身, 茨城県水戸市育ち, 埼玉県本庄市経験者。小学校時代の得意科目は理科、図工。`.replace(
-            /\n/g,
-            "<br />"
-        );
+    import { aboutMeJp } from "../scripts/messages";
+    const message_jp = aboutMeJp;
 </script>
 
 <div class="about">

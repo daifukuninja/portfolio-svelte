@@ -51,7 +51,7 @@
     });
 </script>
 
-<div class="skillmaps-container">
+<div id="skillmaps-container">
     <h2>Skills</h2>
     <h4>by Rader Chart</h4>
     <div id="skillmaps">
@@ -87,13 +87,24 @@
         </div>
     </div>
     <p>{@html message_jp}</p>
+    <p># StackShare <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
 </div>
+<div class="blankbox"></div>
+<div class="v-coffee" />
+<div class="blankbox"></div>
+
 
 <style>
     p {
         font-family: "Noto Sans JP";
     }
-    .skillmaps-container {
+    a {
+        text-decoration: underline;
+    }
+    a:visited {
+        color: inherit;
+    }
+    #skillmaps-container {
         background-color: #110011;
         padding-top: 1em;
         padding-left: 1em;
@@ -103,6 +114,8 @@
     }
     .blankbox {
         height: 50vh;
+        background-color: #110011;
+        opacity: 0.9;
     }
     #skillmaps {
         margin-bottom: 1em;
@@ -140,5 +153,13 @@
         #timeline {
             width: 80vw;
         }
+    }
+    .v-coffee {
+        width: 100vw;
+        height: 80vh;
+        background-image: url(/pouring-hot-coffee.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 </style>

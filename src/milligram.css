@@ -170,7 +170,7 @@ input[type='submit'].button-clear[disabled]:hover {
 }
 
 code {
-  background: #f4f5f6;
+  background: #222222;
   border-radius: .4rem;
   font-size: 86%;
   margin: 0 .2rem;

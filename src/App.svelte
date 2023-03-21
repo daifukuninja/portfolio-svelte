@@ -6,6 +6,8 @@
   import Skills from "./lib/Skills.svelte";
   import Zenn from "./lib/Zenn.svelte";
   import Profile from "./lib/Profile.svelte";
+  import Closing from "./lib/Closing.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <main>
@@ -14,8 +16,10 @@
   <Background />
   <AboutMe />
   <Skills />
-  <Profile />
   <Zenn />
+  <Profile />
+  <Closing />
+  <Footer />
 </main>
 
 <style>

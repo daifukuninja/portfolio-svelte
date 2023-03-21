@@ -7,6 +7,7 @@
 <div id="profile">
     <h2>Profile</h2>
     <p>{@html message_jp}</p>
+    <div class="blankbox" />
 </div>
 
 <style>
@@ -17,5 +18,13 @@
         background-color: #110011;
         padding-left: 1em;
         opacity: 0.9;
+    }
+    .blankbox {
+        height: 50vh;
+    }
+    @media (min-width: 768px) {
+        p {
+            width: 50vw;
+        }
     }
 </style>

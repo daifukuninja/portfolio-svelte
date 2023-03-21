@@ -9,10 +9,12 @@
 </div>
 
 <style>
+
     .wrapper {
         position: relative;
         top: 20%;
-        left: 20px;
+        left: 0.5em;
+        width: 90vw;
     }
     @media (min-width: 768px) {
         .wrapper {

@@ -1,6 +1,6 @@
 <script>
-    import { aboutMeJp } from "../scripts/messages";
-    const message_jp = aboutMeJp;
+    import { aboutMe } from "../scripts/messages";
+    const message_jp = aboutMe.jp;
 </script>
 
 <div class="about">

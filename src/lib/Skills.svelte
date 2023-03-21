@@ -2,14 +2,14 @@
     import { onMount } from "svelte";
     import SkillsMap from "./charts/skillsmaps/SkillsMap.svelte";
     import Timeline from "./charts/timeline/Timeline.svelte";
-    import { skillsJp } from "../scripts/messages";
+    import { skills } from "../scripts/messages";
     import {
         data_frontend,
         data_backend,
         data_utilties,
     } from "./charts/skillsmaps/data";
 
-    const message_jp = skillsJp;
+    const message_jp = skills.jp;
 
     // スクロールによるグラフ表示の発火フラグ
     let fireFrontend = false;
@@ -86,8 +86,8 @@
             <Timeline />
         </div>
     </div>
+    <p>その他, 経験のある技術群について 詳しくはこちらをどうぞ。 >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
     <p>{@html message_jp}</p>
-    <p># StackShare <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
 </div>
 <div class="blankbox"></div>
 <div class="v-coffee" />
@@ -157,7 +157,7 @@
     .v-coffee {
         width: 100vw;
         height: 80vh;
-        background-image: url(/pouring-hot-coffee.jpeg);
+        background-image: url(/coffee-cup-and-coffee-kettle.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

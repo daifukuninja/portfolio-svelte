@@ -5,7 +5,7 @@
 
 <style>
     .v-container {
-        width: 100%;
+        width: 100vw;
         height: 80vh;
         position: sticky;
         left: 0;

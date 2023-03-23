@@ -86,8 +86,8 @@
             <Timeline />
         </div>
     </div>
-    <p>その他, 経験のある技術群について 詳しくはこちらをどうぞ。 >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
     <p>{@html message_jp}</p>
+    <p>その他, 経験のある技術群についてはこちらをご覧ください。 >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
 </div>
 <div class="blankbox"></div>
 <div class="v-coffee" />
@@ -149,17 +149,22 @@
         width: 95vw;
         padding-bottom: 2em;
     }
-    @media (min-width: 768px) {
-        #timeline {
-            width: 80vw;
-        }
-    }
     .v-coffee {
-        width: 100vw;
+        width: auto;
         height: 80vh;
+        background-color: #110011;
         background-image: url(/coffee-cup-and-coffee-kettle.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    @media (min-width: 768px) {
+        #timeline {
+            width: 80vw;
+        }
+        .v-coffee {
+            background-size: 80%;
+            background-image: url(/copper-kettle-pour-over-coffee.jpeg);
+        }
     }
 </style>

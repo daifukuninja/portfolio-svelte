@@ -12,7 +12,7 @@
 
 <div id="closing">
     最後までお付き合いいただき, ありがとうございました。<br>
-    忍者をクリックするとトップに戻ります。<img on:mousedown={callNinja} src="./ninja_shinobiashi.png" alt="ninja" width="40">
+    忍者をクリックすると忍法でトップに戻ります。<img on:mousedown={callNinja} src="./ninja_shinobiashi.png" alt="ninja" width="40">
 </div>
 {#if ninnin}
     <Ninja />    

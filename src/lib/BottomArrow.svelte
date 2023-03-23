@@ -12,7 +12,7 @@
 
     .wrapper {
         position: relative;
-        top: 20%;
+        top: 10%;
         left: 0.5em;
         width: 90vw;
     }

@@ -1,15 +1,15 @@
 <footer class="footer">
     <ul class="md-flex">
-        <li><a href="#">About</a></li>
-        <li><a href="#">サイトマップ</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href={null}>About</a></li>
+        <li><a href={null}>サイトマップ</a></li>
+        <li><a href={null}>プライバシーポリシー</a></li>
     </ul>
-    <p class="copyright">© 2023 Example Inc. All Rights Reserved.</p>
+    <p class="copyright">© 2023 MIHARA Keishi / Contribe Co.,Ltd</p>
 </footer>
 
 <style>
     a {
-        color: #999;
+        color: #FFFFFF;
         text-decoration: none;
     }
 
@@ -21,8 +21,8 @@
     .footer {
         padding: 2rem;
         font-size: 15px;
-        color: #999;
-        background: #fff;
+        color: #FFFFFF;
+        background: #110011;
         border-top: 1px solid #e5e7eb;
     }
 

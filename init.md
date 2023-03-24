@@ -43,7 +43,7 @@ git init
 git add .
 git commit -m "first commit."
 git branch -M main
-git remote add origin https://github.com/daifukuninja/weathre-forcast-svelte.git
+git remote add origin https://github.com/daifukuninja/portfolio-svelte.git
 git push -u origin main
 
 git checkout -b develop

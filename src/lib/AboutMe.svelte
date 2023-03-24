@@ -3,7 +3,7 @@
     const message_jp = aboutMe.jp;
 </script>
 
-<div class="about">
+<div id="about">
     <h2>About Me</h2>
     <h4 class="caption">( "Wikipedia" style. )</h4>
     <p>{@html message_jp}</p>
@@ -16,7 +16,7 @@
 </div>
 
 <style>
-    .about {
+    #about {
         font-family: "Noto Sans JP";
         background-color: #110011;
         height: 100vh;

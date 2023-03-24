@@ -1,8 +1,16 @@
+<script>
+    const gotoTop = () => {
+        window.scrollTo({top: 0, behavior: 'auto'})
+    }
+</script>
 <footer class="footer">
     <ul class="md-flex">
-        <li><a href={null}>About</a></li>
-        <li><a href={null}>サイトマップ</a></li>
-        <li><a href={null}>プライバシーポリシー</a></li>
+        <li><a id="gototop" href={null} on:click={gotoTop}>Top</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skillmaps-container">Skills / Chart</a></li>
+        <li><a href="#timeline-top">Skills / Timeline</a></li>
+        <li><a href="#zenn-container">Articles</a></li>
+        <li><a href="#profile">Profile</a></li>
     </ul>
     <p class="copyright">© 2023 MIHARA Keishi / Contribe Co.,Ltd</p>
 </footer>
@@ -26,8 +34,16 @@
         border-top: 1px solid #e5e7eb;
     }
 
+    .md-flex {
+        column-count: 2;
+    }
+
     .footer a:hover {
-        color: #000;
+        color: #CCCCCC;
+    }
+
+    #gototop {
+        cursor: pointer;
     }
 
     @media (min-width: 768px) {
@@ -41,7 +57,7 @@
         }
 
         .md-flex li + li {
-            margin-left: 16px;
+            margin-left: 48px;
         }
     }
 </style>

@@ -80,7 +80,7 @@
             {/if}
         </div>
     </div>
-    <h4>by Timeline</h4>
+    <h4 id="timeline-top">by Timeline</h4>
     <div id="timeline-container">
         <div id="timeline">
             <Timeline />

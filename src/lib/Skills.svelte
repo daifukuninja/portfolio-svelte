@@ -1,15 +1,33 @@
 <script>
     import { onMount } from "svelte";
+    import { lang } from "../scripts/lang";
     import SkillsMap from "./charts/skillsmaps/SkillsMap.svelte";
     import Timeline from "./charts/timeline/Timeline.svelte";
-    import { skills } from "../scripts/messages";
+    import { skills, otherSkills } from "../scripts/messages";
     import {
         data_frontend,
         data_backend,
         data_utilties,
     } from "./charts/skillsmaps/data";
 
-    const message_jp = skills.jp;
+    let message;
+    let messageOther;
+
+    lang.subscribe((value) => {
+        let m;
+        let mo;
+        if (value == 'ja') {
+            m = skills.jp;
+            mo = otherSkills.jp;
+        } else {
+            m = skills.en;
+            mo = otherSkills.en;
+        }
+        message = m.replace(/\n/g, "<br />");
+        messageOther = mo.replace(/\n/g, "<br />");
+    });
+    message = skills.jp.replace(/\n/g, "<br />");
+    messageOther = otherSkills.jp.replace(/\n/g, "<br />");
 
     // スクロールによるグラフ表示の発火フラグ
     let fireFrontend = false;
@@ -86,8 +104,8 @@
             <Timeline />
         </div>
     </div>
-    <p>{@html message_jp}</p>
-    <p>その他, 経験のある技術群についてはこちらをご覧ください。 >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
+    <p>{@html message}</p>
+    <p>{@html messageOther} >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
 </div>
 <div class="blankbox"></div>
 <div class="v-coffee" />

@@ -1,13 +1,24 @@
 <script lang="ts">
+    import { lang } from "../scripts/lang";
     import { getZennFeeds } from "../scripts/getZennFeeds";
     import type { Root } from "../scripts/getZennFeeds";
 
     let promise = getZennFeeds<Root>();
     const articleCount = 5;
+
+    let isJa = true;
+    lang.subscribe((value) => {
+        if (value == 'ja') {
+            isJa = true;
+        } else {
+            isJa = false;
+        }
+    });
 </script>
 
 <div id="zenn-container">
     <h2>Articles</h2>
+    {#if isJa}
     <div id="articles-caption">
         <a href="https://zenn.dev/">Zenn</a> で技術記事を書いています。(<a
             href="https://zenn.dev/daifukuninja">@daifukuninja</a
@@ -15,13 +26,25 @@
         初めて触った技術のインプレッション, 日々の仕事の中で得た小さな気付きなどを中心に、なるべくこまめにアウトプットできるよう心がけています。<br>
         ここでは最新の {articleCount} 件の記事を紹介します。
     </div>
+    {:else}
+    <div id="articles-caption">
+        I write technical articles on <a href="https://zenn.dev/">Zenn</a>.(<a
+            href="https://zenn.dev/daifukuninja">@daifukuninja</a
+        >)<br>
+        I try to output as often as possible, focusing on impressions of technologies I have touched for the first time, and small insights I have gained in my daily work.<br>
+        Here are the {articleCount} most recent articles.<br>
+        (very truely sorry, Japanese only.)
+    </div>
+    {/if}
     {#await promise}
         <p>loading...</p>
     {:then params}
         <div id="articles-container">
             {#each { length: articleCount } as _, i}
                 <div class="article">
-                    <img src={params.items[i].enclosure.link} alt="thumbnail" />
+                    <a href={params.items[i].link} target="_blank">
+                        <img src={params.items[i].enclosure.link} alt="thumbnail" />
+                    </a>
                     <p class="zenn-description">
                         {@html params.items[i].description.replace(
                             /\n/g,

@@ -1,7 +1,6 @@
 <script>
     import { introduction } from "../scripts/messages";
     import { lang } from "../scripts/lang";
-    const message_jp = introduction.jp.replace(/\n/g, "<br />");
 
     let message = introduction.jp.replace(/\n/g, "<br />");
 

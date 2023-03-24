@@ -1,5 +1,44 @@
 # Portfolio : made by svelte.
 
+## `.devcontainer`の構成
+
+この構成では手元のマシンにnodeをインストールせずに開発を進めることを目指す。
+
+- トップレベルに`.devcontainer`ディレクトリを作成する
+- `devcontainer.json`を作成して`.devcontainer`ディレクトリに格納する
+
+```json:devcontainer.json
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+	"extensions": [
+		"svelte.svelte-vscode",
+		"ritwickdey.liveserver",
+		"gruntfuggly.todo-tree",
+		"eamodio.gitlens",
+		"ms-vscode.vscode-typescript-next",
+		"pmneo.tsimporter",
+		"kakumei.ts-debug",
+		"ryokat3.vscode-qiita-markdown-preview"
+	]
+}
+```
+
+- `Dockerfile`を作成してトップレベルに配置する
+
+```Dockerfile:Dockerfile
+FROM node:lts-bullseye-slim AS dev
+RUN apt update && apt install git vim -y && apt clean
+RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc
+```
+
+- VSCodeで`DevContainers: Rebuild and Reopen in Container`する　※要Dev Containersプラグイン
+
+## 時点の環境情報
+
 ```zsh
 npm -v
 9.5.0
@@ -8,15 +47,18 @@ yarn -v
 1.22.19
 ```
 
+## 構築手順
+
 > package managerはyarnを使うのでnpm installはしないこと
 
-containerに入る
+Dev Containerでトップレベルディレクトリを開く
 
 ```zsh
 npm create vite@latest weathre-forcast -- --template svelte-ts
 ```
 
-.devcontainerとDockerfileをコピーしてcontainerを開き直す
+プロジェクトのディレクトリが作成されるので、`.devcontainer`以下と`Dockerfile`をコピーする  
+いったんVSCode(トップレベルディレクトリ)を閉じ、プロジェクトのディレクトリを開いて`DevContainers: Rebuild and Reopen in Container`する
 
 packageインストール  
 
@@ -50,34 +92,76 @@ git checkout -b develop
 git push origin develop
 ```
 
-githubでdefaultブランチの切り替えする
-以降はdevelopブランチで作業
+以下の２ファイルを`src`直下にコピー
 
-tailwindの初期化
+- `node_modules/milligram/dist/milligram.css`
+- `node_modules/normalize.css/normalize.css`
 
-`yarn tailwindcss init -p`
+`index.html`を編集して`milligram`と`normalize`の参照を追加する
 
-config.cjsをsvlete向きに修正する
+```html:index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/milligram.css" type="text/css" media="screen">    
+    <link rel="stylesheet" href="./src/normalize.css" type="text/css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+```
 
-```js:tailwind.config.cjs
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js,svelte}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require("daisyui")
-  ],
+`app.css`を編集してとりあえず不要そうなプロパティを削除する。背景はやや黒にする
+
+```css:app.css
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #110011;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  min-width: 320px;
+  min-height: 100vh;
 }
 ```
 
-app.cssに追記
+> :root は CSS の擬似クラスで、文書を表すツリーのルート要素を選択します。 HTML では :root は <html> 要素を表し、詳細度が高いことを除けば html セレクターと同等です。
 
-```css:app.css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+オープニングのスクロールアイコン
+---
+
+https://boxicons.com/
+
+背景などの写真
+---
+
+https://pixabay.com/ja/
+
+https://burst.shopify.com/background
+
+背景のパララックス効果
+---
+
+https://kasumiblog.org/css-parallax/
+
+グラフ描画
+---
+
+```zsh
+yarn add layercake d3 @types/d3
 ```
-
-

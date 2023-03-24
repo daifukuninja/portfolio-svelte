@@ -1,12 +1,23 @@
 <script lang="ts">
-    import { profileJp } from "../scripts/messages";
-  const message_jp = profileJp;
+    import { lang } from "../scripts/lang";
+    import { profile } from "../scripts/messages";
 
+    let message = profile.jp.replace(/\n/g, "<br />");
+
+    lang.subscribe((value) => {
+        let m;
+        if (value == 'ja') {
+            m = profile.jp;
+        } else {
+            m = profile.en;
+        }
+        message = m.replace(/\n/g, "<br />");
+    });
 </script>
 
 <div id="profile">
     <h2>Profile</h2>
-    <p>{@html message_jp}</p>
+    <p>{@html message}</p>
     <div class="blankbox" />
 </div>
 

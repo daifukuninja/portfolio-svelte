@@ -1,12 +1,24 @@
 <script>
     import { aboutMe } from "../scripts/messages";
+    import { lang } from "../scripts/lang";
     const message_jp = aboutMe.jp;
+    let message;
+    lang.subscribe((value) => {
+        let m;
+        if (value == 'ja') {
+            m = aboutMe.jp;
+        } else {
+            m = aboutMe.en;
+        }
+        message = m.replace(/\n/g, "<br />");
+    });
+    message = aboutMe.jp.replace(/\n/g, "<br />");
 </script>
 
 <div id="about">
     <h2>About Me</h2>
     <h4 class="caption">( "Wikipedia" style. )</h4>
-    <p>{@html message_jp}</p>
+    <p>{@html message}</p>
     <div>
         <ul>
             <li># GitHub <a href="https://github.com/daifukuninja">https://github.com/daifukuninja</a></li>

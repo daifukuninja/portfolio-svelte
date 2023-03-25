@@ -49,7 +49,7 @@ yarn -v
 
 ## 構築手順
 
-> package managerはyarnを使うのでnpm installはしないこと
+> package managerはyarnを使うこととした。
 
 Dev Containerでトップレベルディレクトリを開く
 
@@ -142,6 +142,8 @@ body {
 
 > :root は CSS の擬似クラスで、文書を表すツリーのルート要素を選択します。 HTML では :root は <html> 要素を表し、詳細度が高いことを除けば html セレクターと同等です。
 
+## 素材などメモ
+
 オープニングのスクロールアイコン
 ---
 
@@ -162,6 +164,6 @@ https://kasumiblog.org/css-parallax/
 グラフ描画
 ---
 
-```zsh
-yarn add layercake d3 @types/d3
-```
+https://unovis.dev/gallery/view?collection=Lines%20and%20Areas&title=Basic%20Timeline
+
+https://www.chartjs.org/docs/latest/samples/other-charts/polar-area.html

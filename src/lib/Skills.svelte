@@ -105,7 +105,7 @@
         </div>
     </div>
     <p>{@html message}</p>
-    <p>{@html messageOther} >> <a href="https://stackshare.io/daifukuninja/shared-stack">https://stackshare.io/daifukuninja/shared-stack</a></p>
+    <p>{@html messageOther} >> <a href="https://stackshare.io/daifukuninja/shared-stack" target="_blank">https://stackshare.io/daifukuninja/shared-stack</a></p>
 </div>
 <div class="blankbox"></div>
 <div class="v-coffee" />

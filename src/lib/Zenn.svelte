@@ -20,16 +20,16 @@
     <h2>Articles</h2>
     {#if isJa}
     <div id="articles-caption">
-        <a href="https://zenn.dev/">Zenn</a> で技術記事を書いています。(<a
-            href="https://zenn.dev/daifukuninja">@daifukuninja</a
+        <a href="https://zenn.dev/" target="_blank">Zenn</a> で技術記事を書いています。(<a
+            href="https://zenn.dev/daifukuninja" target="_blank">@daifukuninja</a
         >)<br>
         初めて触った技術のインプレッション, 日々の仕事の中で得た小さな気付きなどを中心に、なるべくこまめにアウトプットできるよう心がけています。<br>
         ここでは最新の {articleCount} 件の記事を紹介します。
     </div>
     {:else}
     <div id="articles-caption">
-        I write technical articles on <a href="https://zenn.dev/">Zenn</a>.(<a
-            href="https://zenn.dev/daifukuninja">@daifukuninja</a
+        I write technical articles on <a href="https://zenn.dev/" target="_blank">Zenn</a>.(<a
+            href="https://zenn.dev/daifukuninja" target="_blank">@daifukuninja</a
         >)<br>
         I try to output as often as possible, focusing on impressions of technologies I have touched for the first time, and small insights I have gained in my daily work.<br>
         Here are the {articleCount} most recent articles.<br>
@@ -51,7 +51,7 @@
                             "<br />"
                         )}
                     </p>
-                    <p class="zenn-pubdate">created at {params.items[i].pubDate}</p>
+                    <p class="zenn-pubdate">posted at {params.items[i].pubDate}</p>
                 </div>
             {/each}
         </div>
@@ -102,5 +102,11 @@
     }
     p {
         font-family: 'M PLUS Rounded 1c';
+    }
+    a {
+        text-decoration: underline;
+    }
+    a:visited {
+        color: inherit;
     }
 </style>

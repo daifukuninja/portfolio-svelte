@@ -57,5 +57,21 @@ export const profile = {
 
     さらに5年の紆余曲折を経て, 現在はフリーランスとして独立。コーヒーをすすり, プロテインバーをかじり, 妻の用意する生野菜をモシャりながら VSCode で <code>go test</code> したり, <code>wrangler publish -e production</code> したり, <code>git reset --HARD origin/develop</code> したり, <code>docker</code> の <code>compose</code> を <code>up -d</code> したりする毎日。
     `,
-    en: ``,
+    en: `I live in Mito City, Ibaraki Pref. in Japan.
+    
+    After graduating from an engineering college, then
+    
+    clerk at a computer store, in-house SE at a manufacturing company, software engineer(system architect, programmer, tester, user support...etc), 
+    
+    I have experienced a variety of jobs.
+    
+    
+    I am currently a freelance web engineer.`,
+}
+
+export const closing = {
+    jp: `最後までお付き合いいただき, ありがとうございました。
+    忍者をクリックすると忍法でトップに戻ります。`,
+    en: `Thank you for reading to the end.
+    Click on the ninja to return to the top with the ninja method (aka. "NIN-PO").`,
 }

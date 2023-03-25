@@ -3,9 +3,8 @@
     import BottomArrow from "./BottomArrow.svelte";
     import { lang } from "../scripts/lang";
     const message_jp = `ここは日本在住のエンジニア、 \nMIHARA Keishi のポートフォリオサイトです。`.replace(/\n/g, "<br />");
-    const message_en = `This is Keishi MIHARA's portfolio site.`;
-    const caption = `( web + backend + desktop application engineer.  ...well....I'll do whatever I can. )`;
-    const contents = ``;
+    const message_en = `This is Keishi MIHARA's portfolio site.
+    ( web + backend + desktop application engineer.  ...well....I'll do whatever I can. )`.replace(/\n/g, "<br />");
 
     let langKey;
 
@@ -22,15 +21,13 @@
 
 <div class="beginning">
     <h4>{@html message_jp}</h4>
-    <h4>{message_en}</h4>
-    <h5>{caption}</h5>
-    <div>{contents}</div>
-    <Introduction />
+    <h5>{@html message_en}</h5>
     {#if langKey == 'ja'}
         <a href={null} on:click={switchLanguage}>English here.</a>
     {:else}
         <a href={null} on:click={switchLanguage}>日本語はこちら</a>
     {/if}
+    <Introduction />
     <BottomArrow />
 </div>
 

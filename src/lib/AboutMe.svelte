@@ -21,8 +21,8 @@
     <p>{@html message}</p>
     <div>
         <ul>
-            <li># GitHub <a href="https://github.com/daifukuninja">https://github.com/daifukuninja</a></li>
-            <li># Zenn <a href="https://zenn.dev/daifukuninja">https://zenn.dev/daifukuninja</a></li>
+            <li># GitHub <a href="https://github.com/daifukuninja" target="_blank">https://github.com/daifukuninja</a></li>
+            <li># Zenn <a href="https://zenn.dev/daifukuninja" target="_blank">https://zenn.dev/daifukuninja</a></li>
         </ul>
     </div>
 </div>

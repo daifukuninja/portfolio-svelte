@@ -1,11 +1,6 @@
-<script>
-    const gotoTop = () => {
-        window.scrollTo({top: 0, behavior: 'auto'})
-    }
-</script>
 <footer class="footer">
     <ul class="md-flex">
-        <li><a id="gototop" href={null} on:click={gotoTop}>Top</a></li>
+        <li><a href="#top">Top</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#skillmaps-container">Skills / Chart</a></li>
         <li><a href="#timeline-top">Skills / Timeline</a></li>
@@ -40,10 +35,6 @@
 
     .footer a:hover {
         color: #CCCCCC;
-    }
-
-    #gototop {
-        cursor: pointer;
     }
 
     @media (min-width: 768px) {

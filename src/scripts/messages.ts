@@ -28,7 +28,7 @@ export const aboutMe = {
     His best subjects in elementary school were science and arts and crafts.(not good at mathematics)
     
     
-    I work for Contribe Co.,Ltd.`,
+    He is a member of Contribe Co.,Ltd.`,
 }
 
 export const skills = {

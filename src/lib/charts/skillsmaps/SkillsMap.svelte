@@ -24,12 +24,12 @@
         pointLabels: {
           display: true,
           centerPointLabels: true,
-          backdropPadding: 1,
           backdropColor: "#000000",
           color: "#FFFFFF",
           font: {
             size: 14,
           },
+          padding: 0,
         },
         ticks: {
           backdropColor: "#000000",
@@ -45,10 +45,7 @@
     },
     plugins: {
       legend: {
-        position: "top",
-        labels: {
-          color: "#FFFFFF",
-        },
+        display: false,
       },
       title: {
         display: true,

@@ -1,7 +1,6 @@
 <script>
     import { aboutMe } from "../scripts/messages";
     import { lang } from "../scripts/lang";
-    const message_jp = aboutMe.jp;
     let message;
     lang.subscribe((value) => {
         let m;

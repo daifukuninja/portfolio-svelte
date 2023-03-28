@@ -1,10 +1,10 @@
 import axios from "axios";
 
-export const getZennFeeds = async <T>(): Promise<T> => {
+export const getZennFeeds = async <T>(username: string): Promise<T> => {
 
     return new Promise<T>(function (resolve, reject) {
         // TODO: rss2jsonを経由しなくていいようにしたい(cors問題)
-        const serverURL = `https://api.rss2json.com/v1/api.json?rss_url=https://zenn.dev/daifukuninja/feed`;
+        const serverURL = `https://api.rss2json.com/v1/api.json?rss_url=https://zenn.dev/${username}/feed`;
 
         axios
             .get(serverURL)
@@ -31,7 +31,7 @@ export interface Root {
     items: Item[]
 }
 
-export interface Feed {
+interface Feed {
     url: string
     title: string
     link: string
@@ -40,7 +40,7 @@ export interface Feed {
     image: string
 }
 
-export interface Item {
+interface Item {
     title: string
     pubDate: string
     link: string
@@ -53,7 +53,7 @@ export interface Item {
     categories: any[]
 }
 
-export interface Enclosure {
+interface Enclosure {
     link: string
     type: string
 }

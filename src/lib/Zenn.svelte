@@ -3,7 +3,7 @@
     import { getZennFeeds } from "../scripts/getZennFeeds";
     import type { Root } from "../scripts/getZennFeeds";
 
-    let promise = getZennFeeds<Root>();
+    let promise = getZennFeeds<Root>("daifukuninja");
     const articleCount = 5;
 
     let isJa = true;
